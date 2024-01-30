@@ -16,7 +16,7 @@ for i in range(N):
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
 
-def dfs(x, y):
+def bfs(x, y):
     queue = deque()
     queue.append((x, y))
     
@@ -41,4 +41,4 @@ def dfs(x, y):
     else:
         print(result)
 
-dfs(x, y)
+bfs(x, y)
