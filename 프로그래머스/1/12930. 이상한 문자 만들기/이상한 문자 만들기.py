@@ -1,12 +1,2 @@
 def solution(s):
-    answer = []
-    words = s.split(" ")
-    for word in words:
-        tmp = ""
-        for i, char in enumerate(word):
-            if i % 2 == 0:
-                tmp += char.upper()
-            else:
-                tmp += char.lower()
-        answer.append(tmp)
-    return " ".join(answer)
+    return " ".join(["".join([a.lower() if i % 2 else a.upper() for i, a in enumerate(word)]) for word in s.split(" ")])
